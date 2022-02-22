@@ -1,0 +1,1023 @@
+@font-face {
+    font-family: 'Lastochka';
+    src        : url(fonts/Lastochka.ttf);
+}
+
+
+@font-face {
+    font-family: 'Hortensia';
+    src        : url(fonts/Hortensia.ttf);
+}
+
+@font-face {
+    font-family: 'Academy';
+    src        : url(fonts/Academy.ttf);
+}
+
+@font-face {
+    font-family: 'EseninOne';
+    src        : url(fonts/EseninOne.ttf);
+}
+
+@font-face {
+    font-family: 'Serifiqo';
+    src        : url(fonts/Serifiqo.otf);
+}
+
+
+
+
+
+
+
+* {
+    margin         : 0;
+    padding        : 0;
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+    background-image     : url(img/backgraund.jpg);
+    /*background         :   linear-gradient(to right, #ffcc99 0%, #ffffff 100%);*/
+    background-position  : top;
+    background-size      : cover;
+    background-repeat    : no-repeat;
+    background-color     : rgb(245, 214, 214);
+    background-attachment: fixed;
+
+
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+/*====================Общие Стили======================================================*/
+
+.block__title {
+
+    font-family   : 'EseninOne', sans-serif;
+    color         : rgb(107 83 17 / 83%);
+    font-size     : 70px;
+    font-weight   : 600;
+    line-height   : 65px;
+    text-align    : center;
+    margin-bottom : 50px;
+    letter-spacing: 3px;
+}
+
+.block__text {
+    font-family   : 'Serifiqo', sans-serif;
+    max-width     : 600px;
+    text-align    : center;
+    font-size     : 24px;
+    line-height   : 1.3;
+    margin-bottom : 15px;
+    font-weight   : 600;
+    letter-spacing: 2px;
+    padding       : 0 10px;
+}
+
+.container {
+    max-width: 1500px;
+    margin   : 0 auto;
+}
+
+
+.blackout {
+    position        : absolute;
+    background-color: rgba(1, 1, 1, 0.589);
+    height          : 100vh;
+    min-height      : 100%;
+    width           : 100%;
+    z-index         : -1;
+    top             : 0;
+}
+
+
+/*============================Шапка============================================*/
+
+
+.logo_header {
+    text-decoration: none;
+    font-family    : 'Lastochka', sans-serif;
+    color          : #000;
+    font-size      : 27px;
+    display        : none;
+    font-weight    : 700;
+
+}
+
+.header_nav {
+    text-align      : center;
+    background-color: rgba(248, 248, 248, 0.95);
+    padding         : 20px 0;
+    position        : fixed;
+    right           : 0;
+    left            : 0;
+    z-index         : 1;
+}
+
+.header_nav_items {
+    display     : inline;
+    list-style  : none;
+    margin-right: 10px;
+}
+
+.header_nav_link {
+    text-decoration: none;
+    text-transform : uppercase;
+    color          : black;
+}
+
+
+
+.nav_button {
+    display        : none;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+    width          : 40px;
+    height         : 40px;
+    border-radius  : 20%;
+    border         : 1px solid black;
+
+
+}
+
+
+.nav_button._active .nav_button__line:nth-child(1) {
+    transform: rotate(45deg);
+    top      : 8px;
+}
+
+.nav_button._active .nav_button__line:nth-child(2) {
+    opacity: 0;
+}
+
+.nav_button._active .nav_button__line:nth-child(3) {
+    transform: rotate(-45deg);
+    top      : -6px;
+}
+
+.header_nav_list._active {
+    left: 0;
+}
+
+
+
+
+/*=============Приглашение на главной===================*/
+
+.Small_invitation {
+    background-image     : url(img/bg_time1.jpg);
+    background-size      : cover;
+    background-repeat    : no-repeat;
+    background-position  : top;
+    background-attachment: fixed;
+    height               : 100vh;
+    min-height           : 550px;
+    display              : flex;
+    flex-direction       : column;
+    justify-content      : flex-end;
+    align-items          : center;
+    position             : relative;
+    z-index              : -1;
+
+
+}
+
+
+
+
+.Small_invitation_title {
+
+    font-family  : 'EseninOne', sans-serif;
+    font-size    : 95px;
+    font-weight  : 200;
+    color        : white;
+    text-align   : center;
+    line-height  : 55px;
+    margin-bottom: 30px;
+}
+
+.Small_invitation_text {
+    font-family: 'Serifiqo', sans-serif;
+    font-size  : 25px;
+    color      : white;
+
+}
+
+.Small_invitation_date {
+    font-family  : 'EseninOne', sans-serif;
+    font-size    : 40px;
+    font-weight  : 200;
+    color        : white;
+    margin-top   : 15px;
+    margin-bottom: 15px;
+}
+
+.Small_invitation_hashtag {
+    font-family: 'Academy', sans-serif;
+    font-size  : 20px;
+    font-style : italic;
+    color      : white;
+}
+
+.svg_separation {
+    fill  : rgb(107 83 17 / 83%);
+    /*fill: rgb(200, 116, 116);*/
+}
+
+.svg_separation_white {
+    fill         : #fff;
+    margin-bottom: -15px;
+}
+
+
+
+/*============Приглашение основное======================*/
+
+
+.Invitation {
+    padding   : 20px 0;
+    text-align: center;
+
+}
+
+
+.Invitation_text_wrapp {
+    display        : flex;
+    justify-content: center;
+}
+
+.Invitation_date {
+    margin-bottom: 0;
+}
+
+.Invitation_text {
+    margin: 30px 0 50px;
+}
+
+
+
+
+/*=======Програма дня================*/
+
+.Programm {
+    text-align    : center;
+    padding-bottom: 60px;
+
+
+}
+
+
+.Programm_details_wrapp {
+    display        : flex;
+    justify-content: center;
+    position       : relative;
+    z-index        : 0;
+}
+
+.Programm_details_line {
+
+    position        : absolute;
+    width           : 565px;
+    height          : 1px;
+    background-color: black;
+    margin          : auto;
+    left            : 0;
+    right           : 0;
+    top             : 125px;
+    z-index         : -1;
+
+
+}
+
+.Programm_details {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    margin-right  : 90px;
+}
+
+.details_margin_none {
+    margin-right: 0;
+}
+
+.Programm_circle {
+
+    width          : 90px;
+    height         : 90px;
+    border         : 3px solid black;
+    border-radius  : 50%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.Programm_heart {
+    width        : 19px;
+    height       : 18px;
+    margin-top   : 20px;
+    margin-bottom: 16px;
+}
+
+.Programm_time {
+    font-family  : 'EseninOne', sans-serif;
+    margin-bottom: 10px;
+    font-size    : 22px;
+    font-weight  : 600;
+    color        : #000000;
+}
+
+.Programm_text {
+    font-family: 'Serifiqo', sans-serif;
+    font-weight: 600;
+}
+
+
+/*===========Место проведения======================*/
+
+.Place_wedding {
+    padding-bottom: 30px;
+    text-align    : center;
+
+}
+
+
+.Place_wedding__text {
+    font-family   : 'Serifiqo', sans-serif;
+    font-weight   : 600;
+    margin-bottom : 15px;
+    margin-top    : 15px;
+    padding       : 0 10px;
+    font-size     : 14px;
+    letter-spacing: 2px;
+}
+
+
+.maps {
+    border    : none;
+    outline   : none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width     : 700px;
+    height    : 350px;
+
+}
+
+
+
+/*=======До свадьбы осталось=================*/
+
+
+.time_wedding {
+    display              : flex;
+    flex-direction       : column;
+    justify-content      : center;
+    align-items          : center;
+    background-image     : url(img/time_count_bg.jpg);
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    background-position-y: 20%;
+    background-attachment: fixed;
+    position             : relative;
+    z-index              : -1;
+    height               : 100vh;
+    min-height           : 550px;
+}
+
+.time_wedding_title {
+    font-weight: 200;
+    color      : #fff;
+}
+
+.time-count__title {
+    font-family  : 'Hortensia', sans-serif;
+    margin       : 0;
+    margin-bottom: 35px;
+    font-weight  : 400;
+    font-size    : 20px;
+    line-height  : 47px;
+    text-align   : center;
+    color        : #fff;
+}
+
+.time_count_content {
+    display        : flex;
+    justify-content: center;
+}
+
+.time-count__item {
+    text-align: center;
+}
+
+.time-count__val {
+    font-family: 'Hortensia', sans-serif;
+    min-width  : 81px;
+    font-weight: 500;
+    font-size  : 70px;
+    line-height: 82px;
+    color      : #fff;
+
+}
+
+.time-count__separator {
+    font-weight: 700;
+    font-size  : 48px;
+    line-height: 74px;
+    text-align : center;
+    margin     : 0 13px;
+    color      : #fff;
+}
+
+.time-count__text {
+    font-family: 'Hortensia', sans-serif;
+    font-weight: 400;
+    font-size  : 14px;
+    line-height: 20px;
+    color      : #fff;
+}
+
+
+
+/*========Дресс-код==============*/
+
+.Dress_code {
+    padding        : 15px 0;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+
+}
+
+
+.floor__title {
+    font-family: 'Serifiqo', sans-serif;
+    font-size  : 14px;
+    line-height: 1.3;
+    margin     : 15px 0;
+    text-align : center;
+}
+
+.Dress_code_circle .Dress_code__color:last-child {
+    margin-right: 0;
+}
+
+.Dress_code_circle {
+    display: inline-flex;
+}
+
+.Dress_code__color {
+    width           : 60px;
+    height          : 60px;
+    border-radius   : 50%;
+    background-color: yellow;
+    box-shadow      : 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-right    : 10px;
+
+
+}
+
+.color_men_white {
+    background-color: #fff;
+}
+
+.color_men_black {
+    background-color: #000;
+}
+
+
+
+/*===========Свадебный хештег===============================*/
+
+
+.heshteg {
+
+    padding        : 20px 0;
+    text-align     : center;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+
+}
+
+/*===========Пожелания===============================*/
+
+
+.Wishes {
+    padding        : 20px 0px;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+
+}
+
+
+
+
+
+/*=====================Подвал============================*/
+
+.footer {
+    background-image   : url(img/bgcwe2.jpg);
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center;
+    min-height         : 600px;
+    padding            : 0 50px 50px;
+    position           : relative;
+    z-index            : -1;
+    display            : flex;
+    align-items        : flex-end;
+
+
+
+}
+
+.blackout_footer {
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(1, 1, 1, 0.589);
+    z-index         : -1;
+}
+
+.footer_wrapp {
+    flex-basis     : 100%;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+
+.footer_text {
+    font-family   : 'EseninOne', sans-serif;
+    color         : #fff;
+    font-size     : 70px;
+    font-weight   : 200;
+    line-height   : 80px;
+    text-align    : center;
+    letter-spacing: 3px;
+}
+
+
+
+/*==============Адаптив======================*/
+
+
+@media screen and (max-width: 768px) {
+
+    .Small_invitation {
+        background-attachment: local;
+        background-position-x: -140px;
+    }
+
+    .nav_button {
+        display: flex;
+    }
+
+    .block__title {
+
+        font-size  : 55px;
+        line-height: 50px;
+
+    }
+
+    .block__text {
+        max-width: 500px;
+        font-size: 17px;
+    }
+
+    .block {
+        display: block;
+    }
+
+    .nav_button__line {
+        display         : block;
+        width           : 20px;
+        height          : 3px;
+        background-color: #000;
+        margin          : 2px 0;
+        position        : relative;
+        transition      : all .1s linear 0.2s;
+    }
+
+    .header_nav {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        text-align     : center;
+        min-height     : 55px;
+        padding        : 0 0;
+
+    }
+
+    .header_nav_wrapp {
+        display         : flex;
+        justify-content : space-between;
+        width           : 100%;
+        min-height      : 55px;
+        align-items     : center;
+        padding         : 0 15px;
+        position        : relative;
+        background-color: rgba(248, 248, 248, 1);
+    }
+
+    .header_nav_list {
+        display         : flex;
+        flex-direction  : column;
+        justify-content : center;
+        align-items     : center;
+        position        : fixed;
+        top             : 0;
+        left            : -100%;
+        height          : 100vh;
+        width           : 100%;
+        background-color: rgba(248, 248, 248, 0.95);
+        transition      : left 0.5s;
+        z-index         : -1;
+        overflow        : auto;
+
+    }
+
+    .header_nav_items {
+        margin-bottom: 24px;
+    }
+
+    .logo_header {
+        display: block;
+    }
+
+    .Programm {
+        padding-bottom: 0;
+    }
+
+    .Programm_details {
+        margin: 0;
+    }
+
+
+    .Programm_details_wrapp {
+        flex-direction: column;
+    }
+
+    .Programm_details_line {
+        width : 1px;
+        height: 514px;
+        top   : 110px;
+    }
+
+    .Programm_mobile_left {
+        padding-right: 150px;
+    }
+
+    .Programm_mobile_right {
+        padding-left: 150px;
+    }
+
+    .heart_mobile_left {
+        padding-left: 150px;
+    }
+
+    .heart_mobile_right {
+        padding-right: 150px;
+    }
+
+    .svg_separation,
+    .svg_separation_white {
+        width: 320px;
+
+    }
+
+    .Programm_heart {
+        margin-top   : 0px;
+        margin-bottom: 0px;
+    }
+
+
+
+
+    .time_wedding {
+        background-attachment: local;
+    }
+
+    .Dress_code,
+    .heshteg,
+    .Wishes {
+        padding: 0;
+    }
+
+    .footer {
+        align-items: flex-end;
+
+    }
+
+    .footer_wrapp {
+        justify-content: center;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .Small_invitation {
+        min-height           : 100vh;
+        background-position-x: -375px;
+    }
+
+    .block__title {
+        font-weight: 200;
+        color      : rgb(0, 0, 0);
+    }
+
+    .time_wedding {
+        background-position-x: -160px;
+    }
+
+    .time_wedding_title {
+        color: #fff;
+    }
+
+    .footer_text {
+        letter-spacing: 0;
+        line-height   : 80px;
+        font-size     : 65px;
+    }
+
+    .time-count__val {
+        min-width: 0;
+    }
+
+    .maps {
+        width : 100%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Place_wedding__text {
+        line-height: 17px;
+        font-size  : 12px;
+        padding    : 0 5px;
+    }
+
+
+
+    .Small_invitation {
+        background-position-x: -414px;
+    }
+
+    .footer {
+        background-position-x: -130px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+
+    .Small_invitation_title {
+        font-size     : 60px;
+        line-height   : 40px;
+        letter-spacing: 8px;
+    }
+
+    .Small_invitation_text {
+        font-size     : 17px;
+        letter-spacing: 1px;
+    }
+
+    .Small_invitation_date {
+        font-size     : 35px;
+        letter-spacing: 3px;
+        padding-bottom: 45px;
+    }
+
+    .block__title {
+        font-size  : 40px;
+        line-height: 40px;
+
+    }
+
+    .block__text {
+        max-width: 300px;
+        font-size: 17px;
+    }
+
+    .Programm_circle {
+        width : 50px;
+        height: 50px;
+    }
+
+    .Programm_details_line {
+        height: 400px;
+        top   : 65px;
+    }
+
+    .time_wedding {
+        background-position-x: -210px;
+    }
+
+    .Dress_code__color {
+        width : 40px;
+        height: 40px;
+    }
+
+    .Invitation_text {
+        margin: 0 0 50px;
+    }
+
+    .svg_separation,
+    .svg_separation_white {
+        height: 120px;
+    }
+
+    .Place_wedding__text {
+        padding: 0 16px;
+    }
+
+    .time-count__val {
+        font-size  : 35px;
+        line-height: 51px;
+    }
+
+    .time-count__separator {
+        line-height: 30px;
+    }
+
+    .time_wedding_title {
+        line-height  : 20px;
+        margin-bottom: 30px;
+        font-size    : 43px;
+    }
+
+    .svg_separation,
+    .svg_separation_white {
+        width: 300px;
+    }
+
+    .footer_text {
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width: 412px) {
+
+    .time_wedding {
+        background-position-x: -145px;
+    }
+}
+
+@media screen and (max-width: 395px) {
+
+
+    .maps {
+        height: 170px;
+    }
+
+    .Place_wedding__text {
+        line-height: 18px;
+    }
+
+
+
+
+    .time_wedding {
+        background-position-x: -70px;
+    }
+
+    .footer_text {
+        line-height: 57px;
+        font-size  : 60px;
+    }
+
+
+
+
+
+}
+
+@media screen and (max-width: 355px) {
+    .Small_invitation {
+        background-position-x: -460px;
+    }
+
+
+
+    .time_wedding {
+        background-position-x: -105px;
+    }
+
+
+}
+
+@media screen and (max-width: 342px) {
+
+
+
+    .Small_invitation_title {
+        font-size  : 40px;
+        line-height: 30px;
+    }
+
+    .Small_invitation_text {
+        font-size: 15px;
+    }
+
+    .block__title {
+        font-size  : 30px;
+        line-height: 30px;
+    }
+
+
+
+    .Programm_time,
+    .Programm_text {
+        font-size: 16px;
+    }
+
+
+
+
+
+    .Invitation_text {
+        font-size: 14px;
+    }
+
+    .Wishes_text__flore {
+        font-size: 15px;
+    }
+
+
+
+    .svg_separation,
+    .svg_separation_white {
+        width: 250px;
+    }
+
+
+
+    .time-count__val {
+        font-size: 20px;
+    }
+
+    .Dress_code__color {
+        width : 30px;
+        height: 30px;
+    }
+
+
+    .footer_text {
+        font-size     : 42px;
+        line-height   : 40px;
+        padding-bottom: 0;
+    }
+
+    .footer {
+        background-position-x: -230px;
+    }
+
+
+}
+
+@media screen and (max-width: 319px) {
+
+    .Programm_details_line {
+        display: none;
+    }
+
+    .Programm_details {
+        padding      : 0;
+        margin-bottom: 20px;
+        border-top   : 1px solid rgb(255, 137, 147);
+    }
+
+    .Programm_heart {
+        padding: 0;
+        margin : 7px 0;
+
+    }
+
+    .Programm_circle {
+        margin-top: 7px;
+    }
+
+    .time-count__val {
+        font-size  : 16px;
+        line-height: 30px;
+    }
+
+    .time-count__separator {
+        line-height: 22px;
+        font-size  : 20px;
+        margin     : 0 10px;
+    }
+}
